@@ -1,61 +1,60 @@
-# Developer's Note: This is a sample _config.yml file offered with
-# jekyll-theme-prologue for your convenience. To use it, move it to your
-# project's root directory. Please note that the following lines are
-# NECESSARY for Prologue to work correctly:
-#
-# theme: jekyll-theme-prologue
-# collections: [sections]
-#
-# They activate the theme and tell Jekyll to find your homepage content
-# in /_sections. Note where "sections" starts with an underscore
-# and where it doesn't. The social settings will make links to
-# Twitter, etc., but only if you give the URL.
-#
-# Also, be sure to customize url and baseurl for your site.
-#
-# ---------------------------------------------------------------
-#
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
+# which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Your awesome title
-subtitle: Your awesome subtitle
-description: >- # this means to ignore newlines until "baseurl:"
-  This is the demo site for a Jekyll theme version of
-  HTML5 UP's sleek, responsive site template Prologue.
-author: Your Incredible Name
-email: your-email@example.com
-avatar: assets/images/avatar.jpg
+title: HyG
+brief-intro: Front-end Dev Engineer
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
 
-# You'll want to customize url and baseurl for your own site:
-baseurl: "/jekyll-theme-prologue" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+permalink: /:year/:month/:day/:title/
 
-# Social settings
-facebook_url:
-github_url:
-googleplus_url:
-instagram_url:
-linkedin_url:
-pinterest_url:
-slack_url:
-twitter_url:
+# other links
+twitter_username: gaohaoyang126
+facebook_username: gaohaoyang.water
+github_username:  Gaohaoyang
+email: gaohaoyang126@126.com
+weibo_username: 3115521wh
+zhihu_username: gaohaoyang
+linkedIn_username: gaohaoyang
+dribbble_username:
 
-# Google Analytics Tracking ID goes here:
-google_analytics:
+description_footer: 本站记录我前端之旅的沿途风景！
 
-# The following settings are NECESSARY for the Prologue theme to run:
-theme: jekyll-theme-prologue
-collections: [sections]
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+duoshuo_shortname: #hygblog
+disqus_shortname: gaohaoyang
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
+google_analytics_id: UA-72449510-4 # google 分析追踪id
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 6

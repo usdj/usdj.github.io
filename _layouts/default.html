@@ -1,14 +1,26 @@
-<!DOCTYPE HTML>
-<!--
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-Jekyll integration by Chris Bobbe | chrisbobbe.github.io
--->
+<!DOCTYPE html>
 <html>
-	{%- include head.html -%}
-	<body>
-		{{- content -}}
-		{%- include footer.html -%}
-	</body>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+        {{ content }}
+
+    {% include footer.html %}
+    {% include backToTop.html %}
+    <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script src="{{ " /js/smooth-scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+  </body>
+
 </html>

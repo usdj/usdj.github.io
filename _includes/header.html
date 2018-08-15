@@ -1,15 +1,34 @@
-{%- comment -%}
-  Include vars:
-  scrolly_nav
-{%- endcomment -%}
+<header id="top">
+    <div class="wrapper">
+        <a href="{{ site.baseurl }}/" class="brand">{{ site.title }}</a>
+        <small>{{site.brief-intro}}</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    {% if page.url == '/' %}
+                    <a class="active" href="{{site.baseurl}}/">
+                        {% else %}
+                    <a href="{{site.baseurl}}/">
+                    {% endif %}
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
 
-<!-- Header -->
-<div id="header">
-  <div class="top">
-    {%- include logo.html -%}
-    {%- include nav.html section_items=include.scrolly_nav -%}
-  </div>
-  <div class="bottom">
-    {%- include social_icons.html -%}
-  </div>
-</div>
+                {% for my_page in site.pages %}
+                    {% if my_page.type == 'page' %}
+                    <li>
+                        {% if my_page.url == page.url %}
+                        <a class="active" href="{{ my_page.url | prepend: site.baseurl }}">
+                            {% else %}
+                        <a href="{{ my_page.url | prepend: site.baseurl }}">
+                        {% endif %}
+                            <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
