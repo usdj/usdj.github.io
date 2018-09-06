@@ -16,8 +16,8 @@ type: page
 
 ## 联系我
 
-* GitHub：[Gaohaoyang](https://github.com/Gaohaoyang)
-* email：gaohaoyang126@126.com
+* GitHub：[DJY](https://github.com/usdj)
+* email：denggerry@163.com
 
 
 ## 关于本站
